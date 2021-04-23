@@ -71,7 +71,8 @@ function _update()
 end
 ```
 
-Reload the cart with Ctrl+R and now we have our dino on the fields! 
+Reload the cart with Ctrl+R and now we have our dino on the fields!
+
 ![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/movement/map_drawn.png "Drawn map with player")
 
 The only thing is left is to move! Let'S create another function, called `move_player()` in which we can do this!
