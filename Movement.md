@@ -2,6 +2,7 @@
 
 ## Basic draw setup for the player
 
+
 This is very easy to do. First let's create a player variable, and assign it an `x` and a `y` coordinates like so:
 
 ```lua
@@ -138,3 +139,4 @@ Only slight problem we have is the fact, that we can move out from screen. We ca
 - Make the player loop around the screen (exiting left coming in right)
 - Force the player into the screen (we can't leave)
 - Make the camera follow us!
+
