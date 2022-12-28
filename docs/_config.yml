@@ -26,7 +26,7 @@ email: lupa7240@gmal.com
 description: >- # this means to ignore newlines until "baseurl:"
   A little page to share demo carts and their explanations for PICO-8
   related problems and solutions.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "pico8-tutorials" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: achie7240
 github_username:  achie72
