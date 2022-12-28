@@ -100,36 +100,46 @@ function move_player()
 end
 ```
 
-Remember when i said that tiles are 8x8 sprites as well? For this reason, when we want to move our character from one tile to another, we need to increase the corresponding `x` and `y` values by 8!
+PICO-8 has it buttons like so:
+- 0 is Left Arrow
+- 1 is Right Arrow
+- 2 is Up Arrow
+- 3 is Down Arrow
+
+We want to move according to this, so increase our position by 1 for each button press.
 
 ```lua
 function move_player()
 	if btnp(0) then
-		player.x -= 8
-    	-- we are moving to the left tile, which is 8 pixels away going left, so substract
+		player.x -= 1
+    	-- we are moving to the left tile, so substract
   	elseif btnp(1) then
-  		player.x += 8
+  		player.x += 1
   		-- we are moving right, so we add to our x value
  	elseif btnp(2) then
- 		player.y -= 8
+ 		player.y -= 1
    		-- we are moving up
  	elseif btnp(3) then
- 		player.y += 8
+ 		player.y += 1
    		-- we are moving down
   	end
 end
 ```
 
 The only thing left, is to call this movement check in our `_update()` function!
+Remember when i said that tiles are 8x8 sprites as well? For this reason, when we want to draw our character, we need to multiply the corresponding `x` and `y` values by 8! Why? Because that will show are player on the correct map tile (remember there are 16-of them in each row/column and are 8*8 pixels.)
 
 ```lua
 function _update()
 	cls()
 	map()
 	move_player()
-	spr(1, player.x, player.y)
+	spr(1, player.x*8, player.y*8)
 end
 ```
+
+One could ask, why aren't we adding 8 to the player position, and just draw with `player.x, player.y`. My answer is that in these kind of games in the future you will want to check what tiles the player is on, for which it is much easier to do an `mget(player.x, player.y)` rather than `mget(player.x/8, player.y/8)`. (`mget(x,y)` will return the id of the tile on coordinates (x,y))
+
 
 Reload (ctr+R) and now we can move around with our arrow keys!
 
