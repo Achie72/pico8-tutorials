@@ -24,7 +24,7 @@ end
 
 Everything we type in this will be processed several dozen times a second, so let's show our dino on the screen! `spr(id, xPos, yPos)` draws the sprite with `id` to the coords (with the sprite's upper left corner aligned) defined by `xPos` and `yPos`. Our little dino is sprite id 0, so let's make a sprite for him, and draw him!
 
-![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/movement/player_sprite.png "Player Sprite")
+![alt text](../../src_images/movement/player_sprite.png "Player Sprite")
 
 
 ```lua
@@ -38,7 +38,7 @@ end
 
 Now if you press Ctrl+R to reload the cart, we can see the dino on the upper left corner. 
 
-![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/movement/player_drawn.png "Player Drawn")
+![alt text](../../src_images/movement/player_drawn.png "Player Drawn")
 
 **Why?** Pico-8 screen is indexed from 0-128, and `x` and `y` are increasing from left to right, from top to bottom, so:
 
@@ -56,11 +56,11 @@ Now we have our dino on screen let's move him!
 So let's start with the most basic one in my opinion, which will be Grid based movement, where we move along tiles on the map, like in Heroes of Might and Magic series.
 The pico-8 screen is a 128x128 pixel space, in which you can sqeeze a 16x16 tiled area, because tiles are sprites drawn next to each other, and as we now sprite size is 8x8 in pico-8. Let's draw some really basic tiles for a grassy ground and some dirt road.
 
-![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/movement/grass_tile.png "Grass tile")
-![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/movement/dirt_tile.png "Dirt tile")
+![alt text](../../src_images/movement/grass_tile.png "Grass tile")
+![alt text](../../src_images/movement/dirt_tile.png "Dirt tile")
 
 Let's also draw our map! Just a few simple strokes of road, as road and grass doesn't really differ as of now. For ex:
-![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/movement/draw_map.png "Drawing a map")
+![alt text](../../src_images/movement/draw_map.png "Drawing a map")
 
 We have our map, so let's draw it into the screen! You can do this by calling the `map()` function!
 ```lua
@@ -73,7 +73,7 @@ end
 
 Reload the cart with Ctrl+R and now we have our dino on the fields!
 
-![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/movement/map_drawn.png "Drawn map with player")
+![alt text](../../src_images/movement/map_drawn.png "Drawn map with player")
 
 The only thing is left is to move! Let'S create another function, called `move_player()` in which we can do this!
 
@@ -143,7 +143,7 @@ One could ask, why aren't we adding 8 to the player position, and just draw with
 
 Reload (ctr+R) and now we can move around with our arrow keys!
 
-![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/movement/player_moving.gif "Moving Player")
+![alt text](../../src_images/movement/player_moving.gif "Moving Player")
 
 Only slight problem we have is the fact, that we can move out from screen. We can handle this 3 ways:
 

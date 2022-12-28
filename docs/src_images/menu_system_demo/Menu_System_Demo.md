@@ -192,7 +192,7 @@ end
 
 Let's do the other draw calls as well. But before that, let me show you what I've drawn in the cart!
 
-![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/menu_system_demo/sprites.png "Result")
+![alt text](./sprites.png "Result")
 
 ```lua
 -- the drawing code for the logo
@@ -323,4 +323,4 @@ end
 
 # The Result:
 
-![alt text](https://github.com/Achie72/pico8-tutorials/blob/main/src_images/menu_system_demo/results.gif "Result")
+![alt text](./results.gif "Result")
