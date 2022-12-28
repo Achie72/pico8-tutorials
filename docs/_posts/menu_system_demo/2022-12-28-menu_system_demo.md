@@ -5,7 +5,7 @@ date:   2022-12-28 18:51:25 +0100
 categories: ui menu
 ---
 
-![alt text]({{ site.baseurl }}\assets\images\menu_system_demo\results.gif){:style="float: left; margin-up:auto; margin-right:20px"} 
+
 ## Basic idea behind
 
 Most menu systems are achived with state machines. They might sound intimidating, but they are fairly easy. What they mean is the game has different state, which do different things and you can jump between those states.  
@@ -198,7 +198,8 @@ end
 
 Let's do the other draw calls as well. But before that, let me show you what I've drawn in the cart!
 
-![alt text](\assets\images\menu_system_demo\sprites.png){:style="display:block; margin-left:auto; margin-right:auto"}
+<img src="{{site.baseurl | prepend: site.url}}/assets/images/menu_system_demo/sprites.png" alt="Sprites" align="center"/>
+
 
 ```lua
 -- the drawing code for the logo
@@ -329,6 +330,7 @@ end
 
 # The Result:
 
-![alt text]({{ site.baseurl }}\assets\images\menu_system_demo\results.gif){:style="display:block; margin-left:auto; margin-right:auto"}
+<img src="{{site.baseurl | prepend: site.url}}/assets/images/menu_system_demo/results.gif" alt="Results gif" align="center"/>
+
 
 {% include /menu_system_demo/index.html %}
