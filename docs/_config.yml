@@ -18,6 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+
+
+
 title: PICO-8 tutorials
 email: lupa7240@gmal.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -32,6 +35,7 @@ mastodon:
   instance: mastodon.gamedev.place
 
 # Build settings
+markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
