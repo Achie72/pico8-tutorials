@@ -333,4 +333,4 @@ end
 <img src="{{site.baseurl | prepend: site.url}}/assets/images/menu_system_demo/results.gif" alt="Results gif" align="center"/>
 
 
-{% include /menu_system_demo/index.html %}
+<iframe src="{{site.baseurl | prepend: site.url}}/assets/scripts/menu_system_demo/menu_system_demo.html" width="580" height="560" style="border:0"></iframe>
